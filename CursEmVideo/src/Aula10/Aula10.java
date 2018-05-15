@@ -1,8 +1,8 @@
-package Aula07;
+package Aula10;
 
 import java.util.Scanner;
 
-public class Aula07 {
+public class Aula10 {
 	private static Scanner sc;
 
 	public static void main(String[] args) {
