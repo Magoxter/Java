@@ -3,25 +3,24 @@ package Aula07;
 import java.util.Scanner;
 
 public class Aula07 {
-	private static Scanner sc;
 
-	public static void main(String[] args) {
+	static Scanner sc;
+	static final int MAX = 10;
+
+	public static void main(String[] args) {		
 		sc = new Scanner(System.in);
 		
-		Pessoa p1 = new Pessoa();
-		Aluno p2 = new Aluno();
-		Professor p3 = new Professor();
-		Funcionario p4 = new Funcionario();
-		
-		p1.setNome(sc.nextLine());
-		p2.setNome(sc.nextLine());
-		p3.setNome(sc.nextLine());
-		p4.setNome(sc.nextLine());
-		
-		System.out.println(p1.getNome());
-		System.out.println(p2.getNome());
-		System.out.println(p3.getNome());
-		System.out.println(p4.getNome());
-	}
+		Lutador[] l = new Lutador[MAX];
 
+		System.out.print("Lutadores: ");
+		
+		int n = sc.nextInt();
+		for (int i = 0; i < n; i++) {
+			l[i] = new Lutador(sc.nextLine(),sc.next(),sc.nextInt(),sc.nextFloat(),sc.nextFloat(),sc.nextInt(),sc.nextInt(),sc.nextInt());
+		}
+		
+		for (int i = 0; i <= n; i++) {
+			l[i].apresentar();
+		} 	System.out.println();
+	}
 }
